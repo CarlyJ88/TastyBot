@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  timeout: 5000
+  pool: 5
+  # pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  # username: mymealapp
+  # password: <%= ENV['MYMEALAPP_DATABASE_PASSWORD'] %>
+
+development:
+  <<: *default
+  database: mymealapp_development
+
+test:
+  <<: *default
+  database: mymealapp_test
+
+production:
+  <<: *default
+  database: mymealapp_production
+  # username: mymealapp
+  # password: <%= ENV['MYMEALAPP_DATABASE_PASSWORD'] %>
