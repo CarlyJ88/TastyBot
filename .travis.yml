@@ -3,7 +3,7 @@ language: ruby
 rvm:
   - 2.6.0
 
-  before_script:
+before_script:
   - psql -c 'create database mymealapp_test;' -U postgres
 
 script:
@@ -11,7 +11,3 @@ script:
   - bin/rails db:create
   - bin/rails db:migrate
   - bundle exec rspec
-
-  test:
-  adapter: postgresql
-  database: travis_ci_test
