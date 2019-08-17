@@ -27,4 +27,4 @@ have a recipe table
 | recipe_id (forgein key) | method_description| step_order |
 --- | --- | ---|
 
-CREATE TABLE users (id serial primary key not null first_name VARCHAR(20) not null surname VARCHAR(20) not null email not null unique password_digest text not null);
+CREATE TABLE users (user_id serial PRIMARY KEY, first_name VARCHAR (20) not null, surname VARCHAR (20) not null, email text not null unique, password_digest text not null);

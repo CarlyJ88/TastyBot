@@ -10,10 +10,12 @@ default: &default
 development:
   <<: *default
   database: mymealapp_development
-
+  
 test:
   <<: *default
   database: mymealapp_test
+  username: postgres
+  password: ""
 
 production:
   <<: *default
