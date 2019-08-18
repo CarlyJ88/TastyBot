@@ -3,6 +3,7 @@ default: &default
   encoding: unicode
   timeout: 5000
   pool: 5
+
   # pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   # username: mymealapp
   # password: <%= ENV['MYMEALAPP_DATABASE_PASSWORD'] %>
@@ -10,6 +11,13 @@ default: &default
 development:
   <<: *default
   database: mymealapp_development
+
+docker:
+  <<: *default
+  database: mymealapp_development
+  host: db
+  username: postgres
+  password:
   
 test:
   <<: *default
