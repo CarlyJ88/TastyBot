@@ -37,3 +37,6 @@ How to run the application in the brower:
 
 Only had this line if you want a params message to show up when running the app:
 `<%= debug(params) if Rails.env.development? %>`
+
+Use this to reset gems when changing a version such as upgrading a gem:
+`gem pristine --all`
