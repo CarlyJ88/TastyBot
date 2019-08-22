@@ -40,3 +40,15 @@ Only had this line if you want a params message to show up when running the app:
 
 Use this to reset gems when changing a version such as upgrading a gem:
 `gem pristine --all`
+
+RAILS_SERVE_STATIC_FILES=true rails server -e production ????
+
+
+To deploy app to heroku:
+`heroku container:login`
+`heroku container:push tastybot`
+Then release it"
+`heroku container:release web`
+
+To run local environment in production mode:
+`rails s -e production`
