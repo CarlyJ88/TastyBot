@@ -28,5 +28,5 @@ test:
 production:
   <<: *default
   database: mymealapp_production
-  # username: mymealapp
-  # password: <%= ENV['MYMEALAPP_DATABASE_PASSWORD'] %>
+  username: mymealapp
+  password: <%= ENV['MYMEALAPP_DATABASE_PASSWORD'] %>
