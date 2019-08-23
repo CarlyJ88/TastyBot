@@ -18,3 +18,16 @@ To enter the docker image for postgres:
 `docker-compose run db /bin/bash`
 
 Type `exit` to exit the image
+
+`heroku run rake db:migrate`
+`heroku run docker-compose run web rake db:migrate`
+`heroku run rails console`
+`heroku run bash`
+`docker-compose run web rake db:create`
+
+To deploy latest version of image to heroku:
+`docker-compose up --build`
+`docker-compose down`
+<!-- `docker-compose push web` -->
+`heroku container:push web`
+`heroku container:release web`
