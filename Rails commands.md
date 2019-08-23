@@ -52,3 +52,9 @@ Then release it"
 
 To run local environment in production mode:
 `rails s -e production`
+
+`heroku logs --tail --app tastybot`
+`heroku pg:info -a ha-app`
+
+To find out which remote repo your container is pointing to:
+`git config --list | grep heroku`
