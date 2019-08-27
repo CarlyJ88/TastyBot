@@ -1,6 +1,10 @@
 # TastyBot
 
 ## Outline
+With Tastybot, I aim to expand on the previous group project (Dinnergy) with my own unique touch. One goal is to set the application up so the user can keep track of all their ingredients and once they select and use a recipe this will remove the specified quantity in the ingredients for each item from the same ingredients listed in the current stock. I am currently making the backend layer in Ruby on Rails then I will create the front end in React. Later I want deploy this application to my android phone using React Native.
+
+## Features
+- User can sign up
 
 ## User Stories
 
@@ -86,11 +90,14 @@ First, clone this repository. Then:
 > bin/rails db:create
 > bin/rails db:migrate
 
-* Database initialization
+> rails s (to run the application in development mode)
 ```
 
 ### Run tests
+`rake`
 
+* Test Database initialization
+`bin/rake db:migrate RAILS_ENV=test`
 
 * Ruby version
 2.6.0
