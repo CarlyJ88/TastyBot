@@ -4,6 +4,10 @@
 
 <%= form_for(:session, url: login_path) do |form| %>
 
+    <% if flash[:danger] %>
+        <div class="login-notice"><%= flash[:danger] %></div>
+    <% end %>
+
     <%= form.label :email %>
     <%= form.email_field :email %>
 

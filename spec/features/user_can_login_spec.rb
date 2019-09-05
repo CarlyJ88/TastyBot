@@ -19,4 +19,13 @@ RSpec.feature "Log in", type: :feature do
     click_button('Log in')
     expect(page).to have_content first_name
   end
+
+  scenario "login with invalid information" do
+    sign_up
+    expect(page).to have_selector("input[type=submit][value='Log in']")
+    fill_in('session[email]', with: email)
+    fill_in('session[password]', with: 'invalid password')
+    click_button('Log in')
+    expect(page).to have_content 'Invalid credentials'
+  end
 end
