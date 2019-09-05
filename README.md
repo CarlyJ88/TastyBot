@@ -3,6 +3,9 @@
 ## Outline
 With Tastybot, I aim to expand on the previous group project (Dinnergy) with my own unique touch. One goal is to set the application up so the user can keep track of all their ingredients and once they select and use a recipe this will remove the specified quantity in the ingredients for each item from the same ingredients listed in the current stock. I am currently making the backend layer in Ruby on Rails then I will create the front end in React. Later I want deploy this application to my android phone using React Native.
 
+## Deployed at
+https://tastybot2.herokuapp.com/users/new
+
 ## Features
 - User can sign up
 

@@ -22,8 +22,8 @@ docker:
 test:
   <<: *default
   database: mymealapp_test
-  username: postgres
-  password: ""
+  # username: postgres
+  # password: ""
 
 production:
   <<: *default

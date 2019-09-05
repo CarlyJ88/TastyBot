@@ -22,4 +22,10 @@ class UsersController < ApplicationController
       render 'new'
     end
   end
+
+  def index
+    @user = User.find(session[:user_id])
+  end
+
+  
 end
