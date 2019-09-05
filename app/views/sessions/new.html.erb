@@ -1,21 +1,22 @@
 <h1>Login</h1>
-    <% provide(:title, "Login") %>
 
-      <%= form_for(:session, url: login_path) do |form| %>
+<% provide(:title, "Login") %>
 
-      <%= form.label :email %>
-      <%= form.email_field :email %>
+<%= form_for(:session, url: login_path) do |form| %>
 
-      <br>
-      <br>
+    <%= form.label :email %>
+    <%= form.email_field :email %>
 
-      <%= form.label :password %>
-      <%= form.password_field :password %>
+    <br>
+    <br>
 
-      <br>
-      <br>
+    <%= form.label :password %>
+    <%= form.password_field :password %>
 
-      <%= form.submit "Log in" %>
-    <% end %>
+    <br>
+    <br>
+  
+    <%= form.submit "Log in" %>
+<% end %>
 
 <p><%= link_to "Sign up now!", new_user_path %></p>

@@ -20,4 +20,20 @@ RSpec.feature "Sign-up", type: :feature do
     click_button('Signup')
     expect(page).to have_content("Login")
   end
+
+  scenario "can only sign up with unique email" do
+    visit "/users/new"
+    fill_in('user[first_name]', with: first_name)
+    fill_in('user[surname]', with: surname)
+    fill_in('user[email]', with: email)
+    fill_in('user[password]', with: password)
+    click_button('Signup')
+    visit "/users/new"
+    fill_in('user[first_name]', with: first_name)
+    fill_in('user[surname]', with: surname)
+    fill_in('user[email]', with: email)
+    fill_in('user[password]', with: password)
+    click_button('Signup')
+    expect(page).to have_content 'Email has already been taken'
+  end
 end
